@@ -17,24 +17,6 @@ enableRobotsTXT = true
     ShowCodeCopyButtons = true
     ShowPostNavLinks = true
 
-    [params.profileMode]
-        enabled = true
-        title = "Fabien Huré"
-        subtitle = "Quantitative Finance & Software Engineering"
-#        imageUrl = "https://fabienhure.com/profile.jpg" # Upload a photo to static/profile.jpg
-#        imageTitle = "Fabien Huré"
-#        imageWidth = 120
-#        imageHeight = 120
-        
-        [[params.profileMode.buttons]]
-            name = "Blog"
-            url = "/blog/"
-
-        [[params.profileMode.buttons]]
-            name = "About"
-            url = "/about/"
-
-    # --- SOCIAL ICONS (Add your real links) ---
     [[params.socialIcons]]
         name = "linkedin"
         url = "https://www.linkedin.com/in/fabien-hur%C3%A9/"
@@ -44,6 +26,7 @@ enableRobotsTXT = true
     [[params.socialIcons]]
         name = "email"
         url = "mailto:contact@fabienhure.com"
+    mainSections = ["blog"]
 
 [menu]
   [[menu.main]]
