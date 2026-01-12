@@ -1,0 +1,45 @@
+baseURL = "https://fabienhure.com/"
+languageCode = "en-gb"
+title = "Fabien Huré"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+    author = "Fabien Huré"
+    description = "Notes on quantitative finance, analytics platforms, and engineering trade-offs."
+    defaultTheme = "light"
+    ShowReadingTime = true
+    ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    ShowPostNavLinks = true
+    disableSpecial1stPost = true
+
+[menu]
+    [[menu.main]]
+        identifier = "blog"
+        name = "Blog"
+        url = "/blog/"
+        weight = 10
+
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 20
+
+    [[menu.main]]
+        identifier = "contact"
+        name = "Contact"
+        url = "/contact/"
+        weight = 30
+
+[taxonomies]
+    tag = "tags"
+
+[markup]
+    [markup.highlight]
+        noClasses = false
