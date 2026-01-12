@@ -1,5 +1,7 @@
 ---
 title: "About"
+summary: "Quantitative Finance & Software Engineering Lead. Specialist in derivatives modelling, risk analytics platforms, and high-performance trading architecture."
+hidemeta: true  # Hides the "January 12, 2026" date on the About page
 ---
 
 I work at the intersection of quantitative finance, analytics platforms, and software engineering.

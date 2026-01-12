@@ -11,35 +11,55 @@ enableRobotsTXT = true
 [params]
     author = "Fabien Huré"
     description = "Notes on quantitative finance, analytics platforms, and engineering trade-offs."
-    defaultTheme = "light"
+    defaultTheme = "auto"
     ShowReadingTime = true
     ShowBreadCrumbs = true
     ShowCodeCopyButtons = true
     ShowPostNavLinks = true
-    disableSpecial1stPost = true
+
+    [params.profileMode]
+        enabled = true
+        title = "Fabien Huré"
+        subtitle = "Quantitative Finance & Software Engineering"
+#        imageUrl = "https://fabienhure.com/profile.jpg" # Upload a photo to static/profile.jpg
+#        imageTitle = "Fabien Huré"
+#        imageWidth = 120
+#        imageHeight = 120
+        
+        [[params.profileMode.buttons]]
+            name = "Blog"
+            url = "/blog/"
+
+        [[params.profileMode.buttons]]
+            name = "About"
+            url = "/about/"
+
+    # --- SOCIAL ICONS (Add your real links) ---
+    [[params.socialIcons]]
+        name = "linkedin"
+        url = "https://www.linkedin.com/in/fabien-hur%C3%A9/"
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/Genst"
+    [[params.socialIcons]]
+        name = "email"
+        url = "mailto:contact@fabienhure.com"
 
 [menu]
-    [[menu.main]]
-        identifier = "blog"
-        name = "Blog"
-        url = "/blog/"
-        weight = 10
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 10
 
-    [[menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about/"
-        weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 20
 
-    [[menu.main]]
-        identifier = "contact"
-        name = "Contact"
-        url = "/contact/"
-        weight = 30
-
-[taxonomies]
-    tag = "tags"
-
-[markup]
-    [markup.highlight]
-        noClasses = false
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 30
