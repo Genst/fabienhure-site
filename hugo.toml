@@ -16,33 +16,39 @@ enableRobotsTXT = true
     ShowBreadCrumbs = true
     ShowCodeCopyButtons = true
     ShowPostNavLinks = true
-
-    [[params.socialIcons]]
-        name = "linkedin"
-        url = "https://www.linkedin.com/in/fabien-hur%C3%A9/"
-    [[params.socialIcons]]
-        name = "github"
-        url = "https://github.com/Genst"
-    [[params.socialIcons]]
-        name = "email"
-        url = "mailto:contact@fabienhure.com"
+    
     mainSections = ["blog"]
 
+    [params.homeInfoParams]
+        Title = "Quantitative Systems" 
+        Content = "Notes on derivatives modelling, analytics platforms, and architectural trade-offs."
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:contact@fabienhure.com"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/fabien-huré/"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/Genst"
+
 [menu]
-  [[menu.main]]
-    identifier = "blog"
-    name = "Blog"
-    url = "/posts/"
-    weight = 10
+    [[menu.main]]
+        identifier = "blog"
+        name = "Blog"
+        url = "/blog/"
+        weight = 10
 
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 20
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 20
 
-  [[menu.main]]
-    identifier = "contact"
-    name = "Contact"
-    url = "/contact/"
-    weight = 30
+    [[menu.main]]
+        identifier = "contact"
+        name = "Contact"
+        url = "/contact/"
+        weight = 30
