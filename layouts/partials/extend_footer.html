@@ -1,11 +1,16 @@
-{{ if .Params.mermaid }}
+{{ if or .Params.mermaid .Site.Params.mermaid }}
 <script type="module">
-  const isDark = document.body.classList.contains('dark');
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+  
+  window.mermaid = mermaid;
 
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: isDark ? 'dark' : 'default',
+  // Check if the user is in dark mode
+  const isDark = document.body.classList.contains('dark');
+
+  const config = {
+    startOnLoad: false,
+    theme: isDark ? 'dark' : 'default', // Switch base theme
+    fontFamily: 'sans-serif',
     themeVariables: {
       fontSize: '16px',
 
@@ -18,11 +23,30 @@
       lineColor: '#cbd5e1',         // arrow + edge stroke
       arrowheadColor: '#cbd5e1',    // arrow head fill
       edgeLabelBackground: '#111827'
-    },
-    flowchart: {
-      curve: 'basis',               // optional
-      htmlLabels: true
     }
-  });
+  };
+
+  mermaid.initialize(config);
+
+  async function renderMermaid() {
+    const elements = document.querySelectorAll('pre.mermaid');
+    if (elements.length === 0) return;
+
+    const elementsArray = Array.from(elements);
+
+    for (const el of elementsArray) {
+      const graphDefinition = el.textContent;
+      const newDiv = document.createElement('div');
+      newDiv.classList.add('mermaid');
+      newDiv.textContent = graphDefinition;
+      el.parentNode.replaceChild(newDiv, el);
+    }
+    
+    await mermaid.run({
+      nodes: document.querySelectorAll('div.mermaid')
+    });
+  }
+
+  renderMermaid();
 </script>
 {{ end }}

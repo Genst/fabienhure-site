@@ -26,7 +26,6 @@ Some of the most successful analytics platforms in finance are graph-centric. Th
 
 At that point, scaling pressure shifts from analytics to graph mechanics: granularity politics, invalidation correctness, cache coherence, propagation, distributed coordination, and the operational burden of keeping the whole system intelligible.
 
-
 ```mermaid
 flowchart TD
   A["Universal runtime graph"] --> B["Node semantics become contracts"]
@@ -130,7 +129,6 @@ This leads to a simple rhythm:
 - **Plan-time (SOD):** compile execution plans for the stability window, including reuse groups, cache keys, and an allowed recipe envelope.
 - **Run-time (intraday):** execute deterministically and apply deltas as explicit transitions that produce new artefacts (new trades, bounded overrides, market refresh triggering rule-driven invalidation).
 - **Transition (EOD → SOD):** apply lifecycle and corporate actions, roll positions, refresh plans locally and incrementally. This is where structural change belongs.
-
 
 ```mermaid
 flowchart TD
