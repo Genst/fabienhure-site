@@ -10,6 +10,7 @@ categories:
   - Platform Design
   - Technical Leadership
 math: true
+mermaid: true
 words count: 1769
 ---
 # Determinism Scales Better Than Discovery

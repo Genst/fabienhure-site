@@ -1,0 +1,28 @@
+{{ if .Params.mermaid }}
+<script type="module">
+  const isDark = document.body.classList.contains('dark');
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: isDark ? 'dark' : 'default',
+    themeVariables: {
+      fontSize: '16px',
+
+      /* Node styling (optional) */
+      primaryColor: '#f4f3ff',
+      primaryBorderColor: '#a78bfa',
+      primaryTextColor: '#111827',
+
+      /* Edges/arrows */
+      lineColor: '#cbd5e1',         // arrow + edge stroke
+      arrowheadColor: '#cbd5e1',    // arrow head fill
+      edgeLabelBackground: '#111827'
+    },
+    flowchart: {
+      curve: 'basis',               // optional
+      htmlLabels: true
+    }
+  });
+</script>
+{{ end }}
