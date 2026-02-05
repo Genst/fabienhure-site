@@ -1,5 +1,5 @@
 ---
-title: "Determinism Scales Better Than Discovery: Why Universal Graphs Creak"
+title: "Determinism Scales Better Than Discovery"
 date: 2026-02-04
 draft: false
 tags:
