@@ -20,12 +20,18 @@ enableRobotsTXT = true
     assets.favicon32x32 = "/favicon-32x32.png"
     assets.apple_touch_icon = "/apple-touch-icon.png"
     mermaid = true
+    ShowShareButtons = true
     
     mainSections = ["blog"]
 
     [params.homeInfoParams]
         Title = "Quantitative Systems" 
         Content = "Notes on derivatives modelling, analytics platforms, and architectural trade-offs."
+    [params.opengraph]
+        enable = true
+    [params.twitter]
+        enable = true
+
 [[params.socialIcons]]
   name = "email"
   url = "mailto:contact@fabienhure.com"
