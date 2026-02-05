@@ -13,8 +13,6 @@ math: true
 mermaid: true
 words count: 1769
 ---
-# Determinism Scales Better Than Discovery
-
 **Thesis:** When dependencies are knowable (as they often are in pricing and risk), explicit orchestration plus explicit caching scales better than runtime discovery plus database-as-memoisation *(i.e., when the persistence layer quietly becomes the cache and dependency catalogue).*
 
 This is not an argument against graphs. It is an argument about **where you pay complexity**.
