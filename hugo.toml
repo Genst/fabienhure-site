@@ -19,6 +19,11 @@ enableRobotsTXT = true
     [markup.goldmark.extensions.passthrough.delimiters]
       block = [['\[', '\]'], ['$$', '$$']]
       inline = [['\(', '\)'], ['$', '$']]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    tabWidth = 4
 
 [params]
     author = "Fabien Huré"
