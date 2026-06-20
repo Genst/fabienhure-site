@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="80" y="300" width="120" height="6" rx="3" fill="#a78bfa"/>
+  <text x="80" y="270" font-family="Georgia, 'Times New Roman', serif" font-size="84" font-weight="700" fill="#f8fafc">Fabien Hur&#233;</text>
+  <text x="80" y="370" font-family="Arial, Helvetica, sans-serif" font-size="40" fill="#cbd5e1">Quantitative finance &#183; analytics platforms &#183; architecture</text>
+  <text x="80" y="430" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#a78bfa">fabienhure.com</text>
+</svg>

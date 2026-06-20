@@ -7,12 +7,14 @@ tags:
   - Performance
   - QuantFinance
 categories:
-  - Platform Design
-  - Technical Leadership
+  - Architecture
+  - Quant Finance
 math: true
 mermaid: true
 words count: 1769
 ---
+*This is a follow-up to [Why Large Quantitative Analytics Platforms Rarely Fail All at Once]({{< ref "why-large-quantitative-analytics-platforms-rarely-fail-all-at-once" >}}). That post argued platforms slowly lose coherence; this one is about one structural choice that helps keep it.*
+
 **Thesis:** When dependencies are knowable (as they often are in pricing and risk), explicit orchestration plus explicit caching scales better than runtime discovery plus database-as-memoisation *(i.e., when the persistence layer quietly becomes the cache and dependency catalogue).*
 
 This is not an argument against graphs. It is an argument about **where you pay complexity**.

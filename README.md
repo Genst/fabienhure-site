@@ -27,12 +27,30 @@ The site is built using:
 
 ```text
 .
-├── archetypes/
+├── archetypes/        # Front-matter templates (default.md, presentations.md)
 ├── content/
 │   ├── about.md
-│   └── blog/
-├── layouts/
+│   ├── contact.md
+│   ├── blog/          # Long-form posts
+│   └── presentations/ # Talks, with embedded PDF decks
+├── docs/
+│   └── relaunch-plan.md  # Roadmap and open items
+├── layouts/           # Theme overrides (math, mermaid, presentations)
 ├── static/
-├── themes/
-├── config.toml
+├── themes/PaperMod/   # Theme (git submodule)
+├── hugo.toml          # Site configuration
 └── README.md
+```
+
+## Authoring
+
+```bash
+hugo new blog/my-post.md            # new draft post (uses archetypes/default.md)
+hugo new presentations/my-talk.md   # new talk (uses archetypes/presentations.md)
+hugo server -D                      # local preview, including drafts
+```
+
+Posts and talks start as `draft: true`; set `draft: false` to publish. Categories use the
+fixed set: Quant Finance, Quantara, AI, Engineering, Architecture. Set `math: true` for
+posts with LaTeX (`$...$` / `$$...$$`) and `mermaid: true` for diagrams. See
+`docs/relaunch-plan.md` for the open items (Cloudflare token, OG image, newsletter).

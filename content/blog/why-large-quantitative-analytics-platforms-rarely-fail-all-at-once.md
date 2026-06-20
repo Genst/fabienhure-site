@@ -121,3 +121,5 @@ No single post can provide an exhaustive explanation of why platforms fail, nor 
 Platforms do not succeed because they are clever. They succeed because they make deliberate choices, enforce them consistently, and revisit them consciously as objectives evolve.
 
 Most platforms do not break suddenly. They slowly lose coherence.
+
+*A follow-up, [Determinism Scales Better Than Discovery]({{< ref "determinism-scales-better-than-discovery" >}}), looks at one structural choice that helps platforms hold coherence as they scale.*

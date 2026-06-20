@@ -1,12 +1,19 @@
 baseURL = "https://fabienhure.com/"
-languageCode = "en-gb"
 title = "Fabien Huré"
+locale = "en-gb"
 theme = "PaperMod"
 
 enableRobotsTXT = true
 
 [pagination]
   pagerSize = 10
+
+[markup]
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['\[', '\]'], ['$$', '$$']]
+      inline = [['\(', '\)'], ['$', '$']]
 
 [params]
     author = "Fabien Huré"
@@ -16,17 +23,27 @@ enableRobotsTXT = true
     ShowBreadCrumbs = true
     ShowCodeCopyButtons = true
     ShowPostNavLinks = true
+    ShowRssButtonInSectionTermList = true
     assets.favicon16x16 = "/favicon-16x16.png"
     assets.favicon32x32 = "/favicon-32x32.png"
     assets.apple_touch_icon = "/apple-touch-icon.png"
     mermaid = true
     ShowShareButtons = true
-    
+
+    # Site-wide fallback OpenGraph/Twitter card image. Per-post `cover.image` or
+    # `images` front matter overrides this. Export the PNG from the provided SVG
+    # source (see docs/relaunch-plan.md) and drop it at the path below.
+    images = ["images/og-default.png"]
+
     mainSections = ["blog"]
 
+    [params.analytics]
+        [params.analytics.cloudflare]
+            token = "4ce209ddfd9d46e386706f713a883c48"
+
     [params.homeInfoParams]
-        Title = "Quantitative Systems" 
-        Content = "Notes on derivatives modelling, analytics platforms, and architectural trade-offs."
+        Title = "Fabien Huré"
+        Content = "Quantitative finance and software engineering lead, two decades building and rebuilding front-office derivatives, pricing, and risk platforms. I write on quant finance, the Quantara project, AI, engineering, and architecture, and post my talks. Start with the [blog](/blog/) or [presentations](/presentations/)."
     [params.opengraph]
         enable = true
     [params.twitter]
@@ -44,6 +61,10 @@ enableRobotsTXT = true
   name = "github"
   url = "https://github.com/Genst"
 
+[[params.socialIcons]]
+  name = "rss"
+  url = "/index.xml"
+
 [menu]
     [[menu.main]]
         identifier = "blog"
@@ -52,13 +73,25 @@ enableRobotsTXT = true
         weight = 10
 
     [[menu.main]]
+        identifier = "presentations"
+        name = "Presentations"
+        url = "/presentations/"
+        weight = 20
+
+    [[menu.main]]
+        identifier = "topics"
+        name = "Topics"
+        url = "/categories/"
+        weight = 30
+
+    [[menu.main]]
         identifier = "about"
         name = "About"
         url = "/about/"
-        weight = 20
+        weight = 40
 
     [[menu.main]]
         identifier = "contact"
         name = "Contact"
         url = "/contact/"
-        weight = 30
+        weight = 50

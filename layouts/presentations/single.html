@@ -1,0 +1,75 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">
+      {{ .Title }}
+      {{- if .Draft }}<span class="entry-hint" title="Draft"> [draft]</span>{{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">{{ .Description }}</div>
+    {{- end }}
+    <div class="post-meta">
+      {{- with .Params.event }}<span>{{ . }}</span>{{- end }}
+      {{- with .Params.location }} &middot; <span>{{ . }}</span>{{- end }}
+      {{- with .Params.eventDate }} &middot; <time>{{ . | time.Format "2 January 2006" }}</time>{{- end }}
+    </div>
+  </header>
+
+  {{- if .Content }}
+  <div class="post-content md-content">
+    {{- partial "anchored_headings.html" .Content -}}
+  </div>
+  {{- end }}
+
+  {{/* Resolve the slide deck: a page-bundle resource match first, else the raw param. */}}
+  {{- $pdf := "" }}
+  {{- with .Params.pdf }}
+    {{- $res := $.Resources.GetMatch . }}
+    {{- with $res }}
+      {{- $pdf = .RelPermalink }}
+    {{- else }}
+      {{- $pdf = . }}
+    {{- end }}
+  {{- end }}
+
+  {{- with $pdf }}
+  <div class="presentation-slides" style="margin: 1.5rem 0;">
+    <object data="{{ . }}#view=FitH" type="application/pdf"
+      style="width: 100%; height: 80vh; border: 1px solid var(--border);">
+      <p>Your browser cannot display the embedded PDF.
+        <a href="{{ . }}">Download the slides</a> instead.</p>
+    </object>
+    <p style="margin-top: 0.75rem;">
+      <a href="{{ . }}" download>&#8595; Download slides (PDF)</a>
+    </p>
+  </div>
+  {{- end }}
+
+  {{- with .Params.video }}
+  <div class="presentation-video" style="margin: 1.5rem 0;">
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe src="{{ . }}" loading="lazy" allowfullscreen
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"></iframe>
+    </div>
+  </div>
+  {{- end }}
+
+  {{- with .Params.slidesURL }}
+  <p><a href="{{ . }}" target="_blank" rel="noopener">View slides on the original platform &#8599;</a></p>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}{{ partial "post_nav_links.html" . }}{{- end }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}{{ partial "share_icons.html" . }}{{- end }}
+  </footer>
+</article>
+
+{{- end }}{{/* end main */}}

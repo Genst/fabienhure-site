@@ -1,0 +1,25 @@
+{{/* Math rendering (KaTeX), loaded only on pages with `math: true`. */}}
+{{- if .Param "math" }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '\\[', right: '\\]', display: true},
+      {left: '$', right: '$', display: false},
+      {left: '\\(', right: '\\)', display: false}
+    ],
+    throwOnError: false
+  });"></script>
+{{- end }}
+
+{{/* Cloudflare Web Analytics. Inert until the token is set in hugo.toml:
+     [params.analytics.cloudflare] token = "...". No cookies, no consent banner. */}}
+{{- with site.Params.analytics.cloudflare.token }}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token": "{{ . }}"}'></script>
+{{- end }}
+
+{{/* Newsletter hook: when a provider is chosen (e.g. Buttondown), the embed/script
+     goes here or in extend_footer.html. See docs/relaunch-plan.md. */}}
