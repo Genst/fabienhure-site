@@ -60,9 +60,10 @@
     border-bottom-color: var(--accent);
 }
 
-/* Blockquotes carry the accent rule. */
+/* Blockquotes: classic neutral rule (no accent bar). */
 .md-content blockquote {
-    border-inline-start: 0.3rem solid var(--accent);
+    border-inline-start: 0.2rem solid var(--tertiary);
+    color: var(--secondary);
 }
 
 /* Table headers get a quiet accent underline + tint. */
@@ -84,14 +85,17 @@
     color: #fff;
 }
 
+/* Math (KaTeX) inherits the content colour so it reads in light and dark. */
+.katex {
+    color: var(--content);
+}
+
 /* Series banner on multi-part posts. */
 .series-box {
     margin: 1.5rem 0 2rem;
     padding: 1rem 1.2rem;
     border: 1px solid var(--border);
-    border-inline-start: 0.3rem solid var(--accent);
     border-radius: var(--radius);
-    background: var(--accent-tint);
 }
 
 .series-label {
