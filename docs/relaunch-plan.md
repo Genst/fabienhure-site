@@ -121,8 +121,18 @@ headings). Implemented as four commits:
 - **Homepage + wordmark** — `static/favicon.svg` monogram used as favicon (SVG + PNG
   fallbacks) and header logo via `[params.label]`.
 
-Future branding ideas (not yet done): per-post branded OG images for LinkedIn; a portrait on
-About; syntax-highlight theme tuned to the palette; optional web-font serif.
+Follow-up refinements (2026-06-20):
+
+- **Removed AI design tell** — dropped the coloured left accent bar/tint from the series
+  tile and reverted blockquotes to a neutral rule.
+- **Code presentation** — class-based syntax highlighting (github / github-dark scoped under
+  `.dark`, backgrounds deferred to `--code-bg`); `assets/css/extended/syntax.css`.
+- **KaTeX** — inherits content colour for dark mode.
+- **Per-post OG images** — auto-generated branded title cards (`assets/images/og-base.png`
+  base + `layouts/partials/og-image.html`), used as og:image unless a post sets a cover.
+
+Still open: a portrait on About (awaiting the photo — square ≥1000×1000); optional web-font
+serif; newsletter (parked).
 
 ## Changelog
 
