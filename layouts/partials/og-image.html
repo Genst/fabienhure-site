@@ -1,0 +1,36 @@
+{{- /* Returns an absolute OG image URL for the page:
+       explicit cover.image if set, else an auto-generated branded title card,
+       else the site-wide fallback. */ -}}
+{{- $url := "" -}}
+{{- if .Params.cover.image -}}
+  {{- if (ne .Params.cover.relative true) -}}
+    {{- $url = .Params.cover.image | absURL -}}
+  {{- else -}}
+    {{- $url = (path.Join .RelPermalink .Params.cover.image) | absURL -}}
+  {{- end -}}
+{{- else if and .IsPage .Title -}}
+  {{- $base := resources.Get "images/og-base.png" -}}
+  {{- if $base -}}
+    {{- /* Word-wrap the title to ~26 chars per line. */ -}}
+    {{- $lines := slice -}}
+    {{- $cur := "" -}}
+    {{- range $w := split .Title " " -}}
+      {{- $try := cond (eq $cur "") $w (printf "%s %s" $cur $w) -}}
+      {{- if gt (len $try) 26 -}}
+        {{- $lines = $lines | append $cur -}}
+        {{- $cur = $w -}}
+      {{- else -}}
+        {{- $cur = $try -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if ne $cur "" }}{{ $lines = $lines | append $cur }}{{ end -}}
+    {{- $text := delimit $lines "\n" -}}
+    {{- $card := $base.Filter (images.Text $text (dict "x" 80 "y" 200 "size" 54 "color" "#ffffff" "linespacing" 16)) -}}
+    {{- $card = $card.Filter (images.Text "fabienhure.com" (dict "x" 80 "y" 548 "size" 28 "color" "#a99cf6")) -}}
+    {{- $url = $card.Permalink -}}
+  {{- end -}}
+{{- end -}}
+{{- if eq $url "" -}}
+  {{- with site.Params.images -}}{{ $url = index . 0 | absURL -}}{{- end -}}
+{{- end -}}
+{{- $url -}}
