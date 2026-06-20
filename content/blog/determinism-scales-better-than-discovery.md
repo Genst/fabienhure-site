@@ -9,6 +9,8 @@ tags:
 categories:
   - Architecture
   - Quant Finance
+series:
+  - Platform Coherence
 math: true
 mermaid: true
 words count: 1769

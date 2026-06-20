@@ -8,6 +8,11 @@ enableRobotsTXT = true
 [pagination]
   pagerSize = 10
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
 [markup]
   [markup.goldmark.extensions.passthrough]
     enable = true
@@ -71,6 +76,12 @@ enableRobotsTXT = true
         name = "Blog"
         url = "/blog/"
         weight = 10
+
+    [[menu.main]]
+        identifier = "series"
+        name = "Series"
+        url = "/series/"
+        weight = 15
 
     [[menu.main]]
         identifier = "presentations"

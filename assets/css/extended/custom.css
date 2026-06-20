@@ -83,3 +83,37 @@
     background: var(--accent);
     color: #fff;
 }
+
+/* Series banner on multi-part posts. */
+.series-box {
+    margin: 1.5rem 0 2rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--border);
+    border-inline-start: 0.3rem solid var(--accent);
+    border-radius: var(--radius);
+    background: var(--accent-tint);
+}
+
+.series-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.series-list {
+    margin: 0;
+    padding-inline-start: 1.4rem;
+}
+
+.series-list li {
+    margin: 0.2rem 0;
+}
+
+.series-list li.series-current {
+    font-weight: 700;
+    color: var(--primary);
+    list-style: disc;
+}

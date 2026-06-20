@@ -9,6 +9,8 @@ tags:
 categories:
   - Quant Finance
   - Architecture
+series:
+  - Platform Coherence
 math: false
 ---
 Why do large quantitative analytics platforms fail?

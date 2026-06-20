@@ -1,0 +1,29 @@
+{{- with .GetTerms "series" }}
+  {{- range . }}
+    {{- $current := $ }}
+    {{- $posts := where .Pages "Draft" "!=" true }}
+    {{- $posts = $posts.ByDate }}
+    {{- $total := len $posts }}
+    {{- $part := 0 }}
+    {{- range $i, $p := $posts }}
+      {{- if eq $p.RelPermalink $current.RelPermalink }}{{ $part = add $i 1 }}{{ end }}
+    {{- end }}
+    <aside class="series-box">
+      <div class="series-label">
+        Part {{ $part }} of {{ $total }} &middot;
+        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+      </div>
+      <ol class="series-list">
+        {{- range $i, $p := $posts }}
+        <li{{ if eq $p.RelPermalink $current.RelPermalink }} class="series-current"{{ end }}>
+          {{- if eq $p.RelPermalink $current.RelPermalink }}
+          {{ $p.Title }}
+          {{- else }}
+          <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
+          {{- end }}
+        </li>
+        {{- end }}
+      </ol>
+    </aside>
+  {{- end }}
+{{- end }}
