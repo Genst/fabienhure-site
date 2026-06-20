@@ -29,6 +29,7 @@ enableRobotsTXT = true
     ShowCodeCopyButtons = true
     ShowPostNavLinks = true
     ShowRssButtonInSectionTermList = true
+    assets.favicon = "/favicon.svg"
     assets.favicon16x16 = "/favicon-16x16.png"
     assets.favicon32x32 = "/favicon-32x32.png"
     assets.apple_touch_icon = "/apple-touch-icon.png"
@@ -41,6 +42,11 @@ enableRobotsTXT = true
     images = ["images/og-default.png"]
 
     mainSections = ["blog"]
+
+    [params.label]
+        text = "Fabien Huré"
+        icon = "/favicon.svg"
+        iconHeight = 28
 
     [params.analytics]
         [params.analytics.cloudflare]

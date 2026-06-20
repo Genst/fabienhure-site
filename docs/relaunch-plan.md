@@ -106,6 +106,24 @@ Hugo emitted three deprecation warnings (Hugo v0.158); all now fixed, build is w
 These three override files are patched copies of PaperMod templates. When PaperMod upstream
 adopts the new API, delete the overrides and let the theme provide them again.
 
+## Phase 2 — Branding & look-and-feel (2026-06-20)
+
+Direction chosen: **Slate & Violet** (accent `#7c6cf0`, slate dark surfaces, serif
+headings). Implemented as four commits:
+
+- **Design system** — `assets/css/extended/custom.css`: accent (light/dark), serif
+  headings, and accent styling for links, nav, blockquotes, table headers, tags, selection.
+- **Series** — `series` taxonomy, per-post "Part N of M" banner (`layouts/partials/series.html`
+  via `layouts/single.html` override), Series menu entry, generated landing page. Two
+  existing posts seeded as the "Platform Coherence" series.
+- **Diagram system** — Mermaid recoloured to the palette, re-renders on theme toggle,
+  centred, with a caption convention (italic line directly after a diagram).
+- **Homepage + wordmark** — `static/favicon.svg` monogram used as favicon (SVG + PNG
+  fallbacks) and header logo via `[params.label]`.
+
+Future branding ideas (not yet done): per-post branded OG images for LinkedIn; a portrait on
+About; syntax-highlight theme tuned to the palette; optional web-font serif.
+
 ## Changelog
 
 - 2026-06-20 — Plan created; decisions locked from kickoff Q&A.
