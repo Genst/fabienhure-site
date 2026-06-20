@@ -117,3 +117,17 @@
     color: var(--primary);
     list-style: disc;
 }
+
+/* Diagrams: centred, with the paragraph immediately after acting as a caption.
+   Convention: put an italic caption on its own line right after the diagram. */
+.md-content .mermaid {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.md-content .mermaid + p {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+}

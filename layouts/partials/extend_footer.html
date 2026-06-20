@@ -1,52 +1,62 @@
 {{ if or .Params.mermaid .Site.Params.mermaid }}
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-  
   window.mermaid = mermaid;
 
-  // Check if the user is in dark mode
-  const isDark = document.body.classList.contains('dark');
-
-  const config = {
-    startOnLoad: false,
-    theme: isDark ? 'dark' : 'default', // Switch base theme
-    fontFamily: 'sans-serif',
-    themeVariables: {
-      fontSize: '16px',
-
-      /* Node styling (optional) */
-      primaryColor: '#f4f3ff',
-      primaryBorderColor: '#a78bfa',
-      primaryTextColor: '#111827',
-
-      /* Edges/arrows */
-      lineColor: '#cbd5e1',         // arrow + edge stroke
-      arrowheadColor: '#cbd5e1',    // arrow head fill
-      edgeLabelBackground: '#111827'
-    }
-  };
-
-  mermaid.initialize(config);
-
-  async function renderMermaid() {
-    const elements = document.querySelectorAll('pre.mermaid');
-    if (elements.length === 0) return;
-
-    const elementsArray = Array.from(elements);
-
-    for (const el of elementsArray) {
-      const graphDefinition = el.textContent;
-      const newDiv = document.createElement('div');
-      newDiv.classList.add('mermaid');
-      newDiv.textContent = graphDefinition;
-      el.parentNode.replaceChild(newDiv, el);
-    }
-    
-    await mermaid.run({
-      nodes: document.querySelectorAll('div.mermaid')
-    });
+  function themeConfig() {
+    const isDark = document.body.classList.contains('dark');
+    return {
+      startOnLoad: false,
+      theme: 'base',
+      fontFamily: 'inherit',
+      themeVariables: isDark ? {
+        primaryColor: '#1f2540',
+        primaryBorderColor: '#8f80f2',
+        primaryTextColor: '#e6e6ea',
+        secondaryColor: '#2a2f4a',
+        tertiaryColor: '#242a45',
+        lineColor: '#6c6f87',
+        fontSize: '15px'
+      } : {
+        primaryColor: '#f4f3ff',
+        primaryBorderColor: '#6c5ce0',
+        primaryTextColor: '#1f2937',
+        secondaryColor: '#eceaff',
+        tertiaryColor: '#f6f5ff',
+        lineColor: '#9aa0b4',
+        fontSize: '15px'
+      }
+    };
   }
 
-  renderMermaid();
+  /* Convert each code block to a container that retains its source, so we can
+     re-render with the correct palette when the reader toggles the theme. */
+  const containers = Array.from(document.querySelectorAll('pre.mermaid')).map((el) => {
+    const div = document.createElement('div');
+    div.className = 'mermaid';
+    div.dataset.src = el.textContent;
+    div.textContent = el.textContent;
+    el.parentNode.replaceChild(div, el);
+    return div;
+  });
+
+  let rendering = false;
+  async function render() {
+    if (!containers.length || rendering) return;
+    rendering = true;
+    mermaid.initialize(themeConfig());
+    for (const div of containers) {
+      div.removeAttribute('data-processed');
+      div.innerHTML = div.dataset.src;
+    }
+    await mermaid.run({ nodes: containers });
+    rendering = false;
+  }
+
+  render();
+
+  /* Re-render when the theme toggle flips the palette. */
+  const toggle = document.getElementById('theme-toggle');
+  if (toggle) toggle.addEventListener('click', () => setTimeout(render, 60));
 </script>
 {{ end }}
