@@ -90,6 +90,25 @@
     color: var(--content);
 }
 
+/* Copy-link share button: matches the icon row, not blocked by content filters. */
+.share-buttons button.share-copy {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+}
+
+.share-buttons button.share-copy:hover {
+    color: var(--accent);
+}
+
+.share-buttons button.share-copy.copied {
+    color: var(--accent);
+}
+
 /* Heading section-link: branded so it reads as a deliberate permalink. */
 .md-content h1:hover .anchor,
 .md-content h2:hover .anchor,

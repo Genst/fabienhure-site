@@ -54,4 +54,39 @@
             </svg>
         </a>
     </li>
+    <li>
+        <button type="button" class="share-copy" aria-label="copy link to {{ $title | plainify }}"
+            title="Copy link" data-url="{{ $pageurl }}">
+            <svg viewBox="0 0 24 24" height="26px" width="26px" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+            </svg>
+        </button>
+    </li>
 </ul>
+<script>
+  (function () {
+    document.querySelectorAll('.share-copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var url = btn.getAttribute('data-url');
+        var done = function () {
+          btn.classList.add('copied');
+          btn.setAttribute('title', 'Copied!');
+          setTimeout(function () {
+            btn.classList.remove('copied');
+            btn.setAttribute('title', 'Copy link');
+          }, 1500);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done).catch(function () {});
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = url; document.body.appendChild(ta); ta.select();
+          try { document.execCommand('copy'); done(); } catch (e) {}
+          document.body.removeChild(ta);
+        }
+      });
+    });
+  })();
+</script>
