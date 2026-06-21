@@ -90,6 +90,21 @@
     color: var(--content);
 }
 
+/* Heading section-link: branded so it reads as a deliberate permalink. */
+.md-content h1:hover .anchor,
+.md-content h2:hover .anchor,
+.md-content h3:hover .anchor,
+.md-content h4:hover .anchor,
+.md-content h5:hover .anchor,
+.md-content h6:hover .anchor {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.anchor:hover {
+    color: var(--accent-hover) !important;
+}
+
 /* Series banner on multi-part posts. */
 .series-box {
     margin: 1.5rem 0 2rem;
