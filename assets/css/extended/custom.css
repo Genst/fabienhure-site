@@ -7,7 +7,7 @@
     --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
 }
 
-.dark {
+[data-theme="dark"] {
     --accent: #8f80f2;          /* lighter violet for contrast on slate */
     --accent-hover: #a99cf6;
     --accent-tint: rgba(143, 128, 242, 0.14);
