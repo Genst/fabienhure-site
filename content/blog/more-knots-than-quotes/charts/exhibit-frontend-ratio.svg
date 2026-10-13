@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz-root" width="760" height="400" viewBox="0 0 760 400" role="img" aria-label="Front-end tail error ratio, smooth bootstrap over underdetermined fit, by window and currency">
+
+<style>
+.viz-root, [data-theme="light"] .viz-root { color-scheme: light;
+  --surface-1: #fcfcfb; --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --band: #f0efec;
+  --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; }
+@media (prefers-color-scheme: dark) { .viz-root { color-scheme: dark;
+  --surface-1: #1a1a19; --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --band: #232322;
+  --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; } }
+/* Inlined in a page, the site's theme toggle (html[data-theme]) overrides the OS preference. */
+[data-theme="dark"] .viz-root { color-scheme: dark;
+  --surface-1: #1a1a19; --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --band: #232322;
+  --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; }
+.viz-root text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+.t-title { font-size: 15px; font-weight: 600; fill: var(--text-primary); }
+.t-sub { font-size: 12.5px; fill: var(--text-secondary); }
+.t-panel { font-size: 13px; font-weight: 600; fill: var(--text-primary); }
+.t-axis { font-size: 11.5px; fill: var(--text-muted); font-variant-numeric: tabular-nums; }
+.t-cat { font-size: 12px; fill: var(--text-secondary); }
+.t-cat2 { font-size: 11px; fill: var(--text-muted); }
+.t-legend { font-size: 12.5px; fill: var(--text-secondary); }
+.t-value { font-size: 11px; fill: var(--text-primary); font-variant-numeric: tabular-nums; }
+.t-note { font-size: 11.5px; fill: var(--text-muted); }
+.grid { stroke: var(--grid); stroke-width: 1; shape-rendering: crispEdges; }
+.axis { stroke: var(--axis); stroke-width: 1; shape-rendering: crispEdges; }
+</style>
+
+<rect width="760" height="400" fill="var(--surface-1)"/>
+<text class="t-title" x="16" y="26">On the front end, the gap is largest when scheduled decisions are repriced</text>
+<text class="t-sub" x="16" y="45">Front end (2W to 2Y): smooth bootstrap 90th-percentile error divided by the underdetermined fit's. 1 means level.</text>
+<circle cx="21.0" cy="66.0" r="5.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>USD</title></circle>
+<text class="t-legend" x="32" y="70">USD</text>
+<rect x="86.0" y="61.0" width="10" height="10" rx="1.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>EUR</title></rect>
+<text class="t-legend" x="102" y="70">EUR</text>
+<path d="M161.0,59.5 L167.2,70.5 L154.8,70.5 Z" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>GBP</title></path>
+<text class="t-legend" x="172" y="70">GBP</text>
+<line class="axis" x1="150.0" y1="78" x2="150.0" y2="321.0"/>
+<text class="t-axis" x="150.0" y="337.0" text-anchor="middle">0x</text>
+<line class="axis" x1="267.2" y1="78" x2="267.2" y2="321.0"/>
+<text class="t-axis" x="267.2" y="337.0" text-anchor="middle">1x</text>
+<line class="grid" x1="384.4" y1="78" x2="384.4" y2="321.0"/>
+<text class="t-axis" x="384.4" y="337.0" text-anchor="middle">2x</text>
+<line class="grid" x1="501.6" y1="78" x2="501.6" y2="321.0"/>
+<text class="t-axis" x="501.6" y="337.0" text-anchor="middle">3x</text>
+<line class="grid" x1="618.8" y1="78" x2="618.8" y2="321.0"/>
+<text class="t-axis" x="618.8" y="337.0" text-anchor="middle">4x</text>
+<line class="grid" x1="736.0" y1="78" x2="736.0" y2="321.0"/>
+<text class="t-axis" x="736.0" y="337.0" text-anchor="middle">5x</text>
+<text class="t-cat" x="16" y="96.0">Control <tspan class="t-cat2">H1 2019</tspan></text>
+<circle cx="440.7" cy="83.0" r="5.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Control H1 2019, USD: smooth p90 1.85 bp, fit p90 0.74 bp, ratio 2.48 (n=1230)</title></circle>
+<path d="M452.4,94.5 L458.6,105.5 L446.2,105.5 Z" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Control H1 2019, GBP: smooth p90 0.72 bp, fit p90 0.28 bp, ratio 2.58 (n=1232)</title></path>
+<text class="t-cat" x="16" y="130.0">Repo <tspan class="t-cat2">2019</tspan></text>
+<circle cx="358.6" cy="117.0" r="5.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Repo 2019, USD: smooth p90 3.88 bp, fit p90 2.17 bp, ratio 1.78 (n=536)</title></circle>
+<rect x="336.0" y="121.0" width="10" height="10" rx="1.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Repo 2019, EUR: smooth p90 0.53 bp, fit p90 0.32 bp, ratio 1.63 (n=144)</title></rect>
+<path d="M470.0,128.5 L476.2,139.5 L463.8,139.5 Z" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Repo 2019, GBP: smooth p90 1.11 bp, fit p90 0.41 bp, ratio 2.73 (n=545)</title></path>
+<text class="t-cat" x="16" y="164.0">COVID <tspan class="t-cat2">2020</tspan></text>
+<circle cx="323.5" cy="151.0" r="5.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>COVID 2020, USD: smooth p90 1.28 bp, fit p90 0.87 bp, ratio 1.48 (n=1036)</title></circle>
+<rect x="292.7" y="155.0" width="10" height="10" rx="1.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>COVID 2020, EUR: smooth p90 0.91 bp, fit p90 0.72 bp, ratio 1.26 (n=1040)</title></rect>
+<path d="M382.1,162.5 L388.3,173.5 L375.9,173.5 Z" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>COVID 2020, GBP: smooth p90 0.73 bp, fit p90 0.37 bp, ratio 1.98 (n=1025)</title></path>
+<rect x="150" y="179.0" width="586" height="30" fill="var(--band)"/>
+<text class="t-cat" x="16" y="198.0">Hiking <tspan class="t-cat2">2022</tspan></text>
+<circle cx="623.5" cy="185.0" r="5.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Hiking 2022, USD: smooth p90 8.16 bp, fit p90 2.02 bp, ratio 4.04 (n=2488)</title></circle>
+<rect x="602.1" y="189.0" width="10" height="10" rx="1.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Hiking 2022, EUR: smooth p90 6.55 bp, fit p90 1.68 bp, ratio 3.90 (n=2569)</title></rect>
+<path d="M628.2,196.5 L634.4,207.5 L622.0,207.5 Z" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Hiking 2022, GBP: smooth p90 8.21 bp, fit p90 2.01 bp, ratio 4.08 (n=2498)</title></path>
+<rect x="150" y="213.0" width="586" height="30" fill="var(--band)"/>
+<text class="t-cat" x="16" y="232.0">SVB <tspan class="t-cat2">2023</tspan></text>
+<circle cx="575.4" cy="219.0" r="5.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>SVB 2023, USD: smooth p90 6.85 bp, fit p90 1.89 bp, ratio 3.63 (n=730)</title></circle>
+<rect x="529.4" y="223.0" width="10" height="10" rx="1.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>SVB 2023, EUR: smooth p90 4.19 bp, fit p90 1.28 bp, ratio 3.28 (n=730)</title></rect>
+<path d="M522.7,230.5 L528.9,241.5 L516.5,241.5 Z" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>SVB 2023, GBP: smooth p90 3.87 bp, fit p90 1.22 bp, ratio 3.18 (n=710)</title></path>
+<rect x="150" y="247.0" width="586" height="30" fill="var(--band)"/>
+<text class="t-cat" x="16" y="266.0">Tariffs <tspan class="t-cat2">2025</tspan></text>
+<circle cx="707.9" cy="253.0" r="5.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Tariffs 2025, USD: smooth p90 4.48 bp, fit p90 0.94 bp, ratio 4.76 (n=730)</title></circle>
+<rect x="576.3" y="257.0" width="10" height="10" rx="1.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Tariffs 2025, EUR: smooth p90 2.74 bp, fit p90 0.74 bp, ratio 3.68 (n=730)</title></rect>
+<path d="M628.2,264.5 L634.4,275.5 L622.0,275.5 Z" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Tariffs 2025, GBP: smooth p90 3.51 bp, fit p90 0.86 bp, ratio 4.08 (n=720)</title></path>
+<rect x="150" y="281.0" width="586" height="30" fill="var(--band)"/>
+<text class="t-cat" x="16" y="300.0">Payrolls <tspan class="t-cat2">Aug 2025</tspan></text>
+<circle cx="675.1" cy="287.0" r="5.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Payrolls Aug 2025, USD: smooth p90 4.19 bp, fit p90 0.94 bp, ratio 4.48 (n=440)</title></circle>
+<rect x="666.5" y="291.0" width="10" height="10" rx="1.5" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Payrolls Aug 2025, EUR: smooth p90 1.82 bp, fit p90 0.41 bp, ratio 4.45 (n=450)</title></rect>
+<path d="M536.8,298.5 L543.0,309.5 L530.6,309.5 Z" fill="var(--text-secondary)" stroke="var(--surface-1)" stroke-width="2"><title>Payrolls Aug 2025, GBP: smooth p90 2.62 bp, fit p90 0.79 bp, ratio 3.30 (n=440)</title></path>
+<text class="t-note" x="150" y="372">Shaded rows: the 2022 to 2025 windows, repriced around scheduled decisions.</text>
+<text class="t-note" x="150" y="388">COVID 2020: the fastest cuts in the sample came between scheduled meetings (Fed, BoE); the ECB held.</text>
+</svg>

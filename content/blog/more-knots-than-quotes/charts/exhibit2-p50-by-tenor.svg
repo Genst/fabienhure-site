@@ -1,0 +1,318 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz-root" width="760" height="718" viewBox="0 0 760 718" role="img" aria-label="Exhibit 2: leave-one-out par error by tenor, median, pooled over windows">
+
+<style>
+.viz-root, [data-theme="light"] .viz-root { color-scheme: light;
+  --surface-1: #fcfcfb; --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --band: #f0efec;
+  --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; }
+@media (prefers-color-scheme: dark) { .viz-root { color-scheme: dark;
+  --surface-1: #1a1a19; --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --band: #232322;
+  --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; } }
+/* Inlined in a page, the site's theme toggle (html[data-theme]) overrides the OS preference. */
+[data-theme="dark"] .viz-root { color-scheme: dark;
+  --surface-1: #1a1a19; --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --band: #232322;
+  --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; }
+.viz-root text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+.t-title { font-size: 15px; font-weight: 600; fill: var(--text-primary); }
+.t-sub { font-size: 12.5px; fill: var(--text-secondary); }
+.t-panel { font-size: 13px; font-weight: 600; fill: var(--text-primary); }
+.t-axis { font-size: 11.5px; fill: var(--text-muted); font-variant-numeric: tabular-nums; }
+.t-cat { font-size: 12px; fill: var(--text-secondary); }
+.t-cat2 { font-size: 11px; fill: var(--text-muted); }
+.t-legend { font-size: 12.5px; fill: var(--text-secondary); }
+.t-value { font-size: 11px; fill: var(--text-primary); font-variant-numeric: tabular-nums; }
+.t-note { font-size: 11.5px; fill: var(--text-muted); }
+.grid { stroke: var(--grid); stroke-width: 1; shape-rendering: crispEdges; }
+.axis { stroke: var(--axis); stroke-width: 1; shape-rendering: crispEdges; }
+</style>
+
+<rect width="760" height="718" fill="var(--surface-1)"/>
+<text class="t-title" x="16" y="26">Where the advantage lives: error by tenor</text>
+<text class="t-sub" x="16" y="45">Leave-one-out par error, median, bp, pooled over all windows. The shaded band is the front end, two weeks to two years.</text>
+<line x1="14" y1="66" x2="28" y2="66" stroke="var(--series-1)" stroke-width="2" stroke-linecap="round"/>
+<circle cx="21" cy="66" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"/>
+<text class="t-legend" x="33" y="70">Underdetermined fit</text>
+<line x1="189.8" y1="66" x2="203.8" y2="66" stroke="var(--series-2)" stroke-width="2" stroke-linecap="round"/>
+<circle cx="196.8" cy="66" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"/>
+<text class="t-legend" x="208.8" y="70">Smooth bootstrap</text>
+<line x1="344.0" y1="66" x2="358.0" y2="66" stroke="var(--series-3)" stroke-width="2" stroke-linecap="round"/>
+<circle cx="351.0" cy="66" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"/>
+<text class="t-legend" x="363.0" y="70">Flat-forward bootstrap</text>
+<text class="t-panel" x="16" y="96">USD</text>
+<rect x="46.0" y="112.0" width="387.8" height="140" fill="var(--band)"/>
+<text class="t-note" x="427.8" y="125.0" text-anchor="end">front end</text>
+<line class="axis" x1="46" y1="252.0" x2="744" y2="252.0"/>
+<text class="t-axis" x="38" y="256.0" text-anchor="end">0</text>
+<line class="grid" x1="46" y1="228.7" x2="744" y2="228.7"/>
+<text class="t-axis" x="38" y="232.7" text-anchor="end">1</text>
+<line class="grid" x1="46" y1="205.3" x2="744" y2="205.3"/>
+<text class="t-axis" x="38" y="209.3" text-anchor="end">2</text>
+<line class="grid" x1="46" y1="182.0" x2="744" y2="182.0"/>
+<text class="t-axis" x="38" y="186.0" text-anchor="end">3</text>
+<line class="grid" x1="46" y1="158.7" x2="744" y2="158.7"/>
+<text class="t-axis" x="38" y="162.7" text-anchor="end">4</text>
+<line class="grid" x1="46" y1="135.3" x2="744" y2="135.3"/>
+<text class="t-axis" x="38" y="139.3" text-anchor="end">5</text>
+<line class="grid" x1="46" y1="112.0" x2="744" y2="112.0"/>
+<text class="t-axis" x="38" y="116.0" text-anchor="end">6</text>
+<text class="t-cat" x="65.4" y="269" text-anchor="middle">2W</text>
+<text class="t-cat" x="104.2" y="269" text-anchor="middle">3W</text>
+<text class="t-cat" x="142.9" y="269" text-anchor="middle">1M</text>
+<text class="t-cat" x="181.7" y="269" text-anchor="middle">2M</text>
+<text class="t-cat" x="220.5" y="269" text-anchor="middle">3M</text>
+<text class="t-cat" x="259.3" y="269" text-anchor="middle">6M</text>
+<text class="t-cat" x="298.1" y="269" text-anchor="middle">9M</text>
+<text class="t-cat" x="336.8" y="269" text-anchor="middle">1Y</text>
+<text class="t-cat" x="375.6" y="269" text-anchor="middle">18M</text>
+<text class="t-cat" x="414.4" y="269" text-anchor="middle">2Y</text>
+<text class="t-cat" x="453.2" y="269" text-anchor="middle">3Y</text>
+<text class="t-cat" x="491.9" y="269" text-anchor="middle">4Y</text>
+<text class="t-cat" x="530.7" y="269" text-anchor="middle">5Y</text>
+<text class="t-cat" x="569.5" y="269" text-anchor="middle">7Y</text>
+<text class="t-cat" x="608.3" y="269" text-anchor="middle">10Y</text>
+<text class="t-cat" x="647.1" y="269" text-anchor="middle">15Y</text>
+<text class="t-cat" x="685.8" y="269" text-anchor="middle">20Y</text>
+<text class="t-cat" x="724.6" y="269" text-anchor="middle">25Y</text>
+<path d="M65.4,245.5 L104.2,242.0 L142.9,229.4 L181.7,209.1 L220.5,151.2 L259.3,158.9 L298.1,199.5 L336.8,176.6 L375.6,210.7 L414.4,206.0 L453.2,209.5 L491.9,228.9 L530.7,221.0 L569.5,194.4 L608.3,202.1 L647.1,221.0 L685.8,176.2 L724.6,213.0" fill="none" stroke="var(--series-3)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="65.4" cy="245.5" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 2W, Flat-forward bootstrap: p50 0.28, p90 4.24 bp (n=708)</title></circle>
+<circle cx="104.2" cy="242.0" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 3W, Flat-forward bootstrap: p50 0.43, p90 4.15 bp (n=721)</title></circle>
+<circle cx="142.9" cy="229.4" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 1M, Flat-forward bootstrap: p50 0.97, p90 7.42 bp (n=717)</title></circle>
+<circle cx="181.7" cy="209.1" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 2M, Flat-forward bootstrap: p50 1.84, p90 7.84 bp (n=721)</title></circle>
+<circle cx="220.5" cy="151.2" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 3M, Flat-forward bootstrap: p50 4.32, p90 9.89 bp (n=720)</title></circle>
+<circle cx="259.3" cy="158.9" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 6M, Flat-forward bootstrap: p50 3.99, p90 11.07 bp (n=720)</title></circle>
+<circle cx="298.1" cy="199.5" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 9M, Flat-forward bootstrap: p50 2.25, p90 5.56 bp (n=721)</title></circle>
+<circle cx="336.8" cy="176.6" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 1Y, Flat-forward bootstrap: p50 3.23, p90 8.94 bp (n=721)</title></circle>
+<circle cx="375.6" cy="210.7" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 18M, Flat-forward bootstrap: p50 1.77, p90 8.39 bp (n=720)</title></circle>
+<circle cx="414.4" cy="206.0" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 2Y, Flat-forward bootstrap: p50 1.97, p90 5.94 bp (n=721)</title></circle>
+<circle cx="453.2" cy="209.5" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 3Y, Flat-forward bootstrap: p50 1.82, p90 3.54 bp (n=721)</title></circle>
+<circle cx="491.9" cy="228.9" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 4Y, Flat-forward bootstrap: p50 0.99, p90 2.12 bp (n=721)</title></circle>
+<circle cx="530.7" cy="221.0" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 5Y, Flat-forward bootstrap: p50 1.33, p90 3.15 bp (n=721)</title></circle>
+<circle cx="569.5" cy="194.4" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 7Y, Flat-forward bootstrap: p50 2.47, p90 3.92 bp (n=721)</title></circle>
+<circle cx="608.3" cy="202.1" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 10Y, Flat-forward bootstrap: p50 2.14, p90 4.06 bp (n=721)</title></circle>
+<circle cx="647.1" cy="221.0" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 15Y, Flat-forward bootstrap: p50 1.33, p90 4.11 bp (n=720)</title></circle>
+<circle cx="685.8" cy="176.2" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 20Y, Flat-forward bootstrap: p50 3.25, p90 5.51 bp (n=721)</title></circle>
+<circle cx="724.6" cy="213.0" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>USD 25Y, Flat-forward bootstrap: p50 1.67, p90 2.42 bp (n=697)</title></circle>
+<path d="M65.4,243.8 L104.2,241.5 L142.9,230.5 L181.7,235.2 L220.5,176.9 L259.3,176.4 L298.1,237.3 L336.8,203.7 L375.6,221.2 L414.4,219.8 L453.2,226.3 L491.9,243.6 L530.7,235.4 L569.5,216.5 L608.3,210.2 L647.1,234.7 L685.8,202.1 L724.6,229.6" fill="none" stroke="var(--series-2)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="65.4" cy="243.8" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 2W, Smooth bootstrap: p50 0.35, p90 4.03 bp (n=708)</title></circle>
+<circle cx="104.2" cy="241.5" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 3W, Smooth bootstrap: p50 0.45, p90 3.91 bp (n=721)</title></circle>
+<circle cx="142.9" cy="230.5" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 1M, Smooth bootstrap: p50 0.92, p90 7.25 bp (n=717)</title></circle>
+<circle cx="181.7" cy="235.2" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 2M, Smooth bootstrap: p50 0.72, p90 4.85 bp (n=721)</title></circle>
+<circle cx="220.5" cy="176.9" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 3M, Smooth bootstrap: p50 3.22, p90 7.55 bp (n=720)</title></circle>
+<circle cx="259.3" cy="176.4" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 6M, Smooth bootstrap: p50 3.24, p90 7.91 bp (n=720)</title></circle>
+<circle cx="298.1" cy="237.3" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 9M, Smooth bootstrap: p50 0.63, p90 1.96 bp (n=721)</title></circle>
+<circle cx="336.8" cy="203.7" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 1Y, Smooth bootstrap: p50 2.07, p90 5.78 bp (n=721)</title></circle>
+<circle cx="375.6" cy="221.2" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 18M, Smooth bootstrap: p50 1.32, p90 5.33 bp (n=720)</title></circle>
+<circle cx="414.4" cy="219.8" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 2Y, Smooth bootstrap: p50 1.38, p90 3.50 bp (n=721)</title></circle>
+<circle cx="453.2" cy="226.3" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 3Y, Smooth bootstrap: p50 1.10, p90 2.41 bp (n=721)</title></circle>
+<circle cx="491.9" cy="243.6" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 4Y, Smooth bootstrap: p50 0.36, p90 0.70 bp (n=721)</title></circle>
+<circle cx="530.7" cy="235.4" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 5Y, Smooth bootstrap: p50 0.71, p90 1.78 bp (n=721)</title></circle>
+<circle cx="569.5" cy="216.5" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 7Y, Smooth bootstrap: p50 1.52, p90 2.53 bp (n=721)</title></circle>
+<circle cx="608.3" cy="210.2" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 10Y, Smooth bootstrap: p50 1.79, p90 3.56 bp (n=721)</title></circle>
+<circle cx="647.1" cy="234.7" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 15Y, Smooth bootstrap: p50 0.74, p90 2.74 bp (n=720)</title></circle>
+<circle cx="685.8" cy="202.1" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 20Y, Smooth bootstrap: p50 2.14, p90 3.67 bp (n=721)</title></circle>
+<circle cx="724.6" cy="229.6" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>USD 25Y, Smooth bootstrap: p50 0.96, p90 1.79 bp (n=697)</title></circle>
+<path d="M65.4,242.0 L104.2,242.7 L142.9,245.2 L181.7,243.8 L220.5,239.4 L259.3,236.4 L298.1,245.5 L336.8,243.8 L375.6,238.5 L414.4,238.9 L453.2,245.0 L491.9,248.3 L530.7,247.1 L569.5,243.8 L608.3,235.2 L647.1,244.1 L685.8,236.1 L724.6,243.1" fill="none" stroke="var(--series-1)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="65.4" cy="242.0" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 2W, Underdetermined fit: p50 0.43, p90 1.64 bp (n=708)</title></circle>
+<circle cx="104.2" cy="242.7" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 3W, Underdetermined fit: p50 0.40, p90 1.30 bp (n=721)</title></circle>
+<circle cx="142.9" cy="245.2" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 1M, Underdetermined fit: p50 0.29, p90 1.28 bp (n=717)</title></circle>
+<circle cx="181.7" cy="243.8" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 2M, Underdetermined fit: p50 0.35, p90 1.47 bp (n=721)</title></circle>
+<circle cx="220.5" cy="239.4" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 3M, Underdetermined fit: p50 0.54, p90 1.91 bp (n=720)</title></circle>
+<circle cx="259.3" cy="236.4" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 6M, Underdetermined fit: p50 0.67, p90 3.03 bp (n=720)</title></circle>
+<circle cx="298.1" cy="245.5" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 9M, Underdetermined fit: p50 0.28, p90 1.14 bp (n=721)</title></circle>
+<circle cx="336.8" cy="243.8" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 1Y, Underdetermined fit: p50 0.35, p90 1.00 bp (n=721)</title></circle>
+<circle cx="375.6" cy="238.5" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 18M, Underdetermined fit: p50 0.58, p90 1.84 bp (n=720)</title></circle>
+<circle cx="414.4" cy="238.9" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 2Y, Underdetermined fit: p50 0.56, p90 1.58 bp (n=721)</title></circle>
+<circle cx="453.2" cy="245.0" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 3Y, Underdetermined fit: p50 0.30, p90 0.93 bp (n=721)</title></circle>
+<circle cx="491.9" cy="248.3" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 4Y, Underdetermined fit: p50 0.16, p90 0.54 bp (n=721)</title></circle>
+<circle cx="530.7" cy="247.1" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 5Y, Underdetermined fit: p50 0.21, p90 0.57 bp (n=721)</title></circle>
+<circle cx="569.5" cy="243.8" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 7Y, Underdetermined fit: p50 0.35, p90 0.80 bp (n=721)</title></circle>
+<circle cx="608.3" cy="235.2" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 10Y, Underdetermined fit: p50 0.72, p90 1.61 bp (n=721)</title></circle>
+<circle cx="647.1" cy="244.1" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 15Y, Underdetermined fit: p50 0.34, p90 1.18 bp (n=720)</title></circle>
+<circle cx="685.8" cy="236.1" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 20Y, Underdetermined fit: p50 0.68, p90 1.44 bp (n=721)</title></circle>
+<circle cx="724.6" cy="243.1" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>USD 25Y, Underdetermined fit: p50 0.38, p90 1.11 bp (n=697)</title></circle>
+<text class="t-panel" x="16" y="300">EUR</text>
+<rect x="46.0" y="316.0" width="387.8" height="140" fill="var(--band)"/>
+<line class="axis" x1="46" y1="456.0" x2="744" y2="456.0"/>
+<text class="t-axis" x="38" y="460.0" text-anchor="end">0</text>
+<line class="grid" x1="46" y1="432.7" x2="744" y2="432.7"/>
+<text class="t-axis" x="38" y="436.7" text-anchor="end">1</text>
+<line class="grid" x1="46" y1="409.3" x2="744" y2="409.3"/>
+<text class="t-axis" x="38" y="413.3" text-anchor="end">2</text>
+<line class="grid" x1="46" y1="386.0" x2="744" y2="386.0"/>
+<text class="t-axis" x="38" y="390.0" text-anchor="end">3</text>
+<line class="grid" x1="46" y1="362.7" x2="744" y2="362.7"/>
+<text class="t-axis" x="38" y="366.7" text-anchor="end">4</text>
+<line class="grid" x1="46" y1="339.3" x2="744" y2="339.3"/>
+<text class="t-axis" x="38" y="343.3" text-anchor="end">5</text>
+<line class="grid" x1="46" y1="316.0" x2="744" y2="316.0"/>
+<text class="t-axis" x="38" y="320.0" text-anchor="end">6</text>
+<text class="t-cat" x="65.4" y="473" text-anchor="middle">2W</text>
+<text class="t-cat" x="104.2" y="473" text-anchor="middle">3W</text>
+<text class="t-cat" x="142.9" y="473" text-anchor="middle">1M</text>
+<text class="t-cat" x="181.7" y="473" text-anchor="middle">2M</text>
+<text class="t-cat" x="220.5" y="473" text-anchor="middle">3M</text>
+<text class="t-cat" x="259.3" y="473" text-anchor="middle">6M</text>
+<text class="t-cat" x="298.1" y="473" text-anchor="middle">9M</text>
+<text class="t-cat" x="336.8" y="473" text-anchor="middle">1Y</text>
+<text class="t-cat" x="375.6" y="473" text-anchor="middle">18M</text>
+<text class="t-cat" x="414.4" y="473" text-anchor="middle">2Y</text>
+<text class="t-cat" x="453.2" y="473" text-anchor="middle">3Y</text>
+<text class="t-cat" x="491.9" y="473" text-anchor="middle">4Y</text>
+<text class="t-cat" x="530.7" y="473" text-anchor="middle">5Y</text>
+<text class="t-cat" x="569.5" y="473" text-anchor="middle">7Y</text>
+<text class="t-cat" x="608.3" y="473" text-anchor="middle">10Y</text>
+<text class="t-cat" x="647.1" y="473" text-anchor="middle">15Y</text>
+<text class="t-cat" x="685.8" y="473" text-anchor="middle">20Y</text>
+<text class="t-cat" x="724.6" y="473" text-anchor="middle">25Y</text>
+<path d="M65.4,454.8 L104.2,454.1 L142.9,445.7 L181.7,414.2 L220.5,383.9 L259.3,390.7 L298.1,434.8 L336.8,434.3 L375.6,409.1 L414.4,410.3 L453.2,425.9 L491.9,432.7 L530.7,418.4 L569.5,358.0 L608.3,390.2 L647.1,328.1 L685.8,369.0 L724.6,417.3" fill="none" stroke="var(--series-3)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="65.4" cy="454.8" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 2W, Flat-forward bootstrap: p50 0.05, p90 2.16 bp (n=568)</title></circle>
+<circle cx="104.2" cy="454.1" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 3W, Flat-forward bootstrap: p50 0.08, p90 2.48 bp (n=551)</title></circle>
+<circle cx="142.9" cy="445.7" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 1M, Flat-forward bootstrap: p50 0.44, p90 5.76 bp (n=568)</title></circle>
+<circle cx="181.7" cy="414.2" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 2M, Flat-forward bootstrap: p50 1.79, p90 8.33 bp (n=568)</title></circle>
+<circle cx="220.5" cy="383.9" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 3M, Flat-forward bootstrap: p50 3.09, p90 11.68 bp (n=568)</title></circle>
+<circle cx="259.3" cy="390.7" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 6M, Flat-forward bootstrap: p50 2.80, p90 10.32 bp (n=568)</title></circle>
+<circle cx="298.1" cy="434.8" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 9M, Flat-forward bootstrap: p50 0.91, p90 5.92 bp (n=568)</title></circle>
+<circle cx="336.8" cy="434.3" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 1Y, Flat-forward bootstrap: p50 0.93, p90 6.48 bp (n=568)</title></circle>
+<circle cx="375.6" cy="409.1" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 18M, Flat-forward bootstrap: p50 2.01, p90 5.49 bp (n=568)</title></circle>
+<circle cx="414.4" cy="410.3" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 2Y, Flat-forward bootstrap: p50 1.96, p90 3.97 bp (n=568)</title></circle>
+<circle cx="453.2" cy="425.9" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 3Y, Flat-forward bootstrap: p50 1.29, p90 3.76 bp (n=568)</title></circle>
+<circle cx="491.9" cy="432.7" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 4Y, Flat-forward bootstrap: p50 1.00, p90 2.04 bp (n=568)</title></circle>
+<circle cx="530.7" cy="418.4" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 5Y, Flat-forward bootstrap: p50 1.61, p90 2.77 bp (n=568)</title></circle>
+<circle cx="569.5" cy="358.0" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 7Y, Flat-forward bootstrap: p50 4.20, p90 5.48 bp (n=568)</title></circle>
+<circle cx="608.3" cy="390.2" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 10Y, Flat-forward bootstrap: p50 2.82, p90 5.07 bp (n=568)</title></circle>
+<circle cx="647.1" cy="328.1" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 15Y, Flat-forward bootstrap: p50 5.48, p90 9.57 bp (n=568)</title></circle>
+<circle cx="685.8" cy="369.0" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 20Y, Flat-forward bootstrap: p50 3.73, p90 5.42 bp (n=568)</title></circle>
+<circle cx="724.6" cy="417.3" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 25Y, Flat-forward bootstrap: p50 1.66, p90 2.13 bp (n=568)</title></circle>
+<path d="M65.4,453.9 L104.2,451.6 L142.9,445.7 L181.7,440.6 L220.5,405.4 L259.3,409.3 L298.1,447.4 L336.8,442.2 L375.6,437.3 L414.4,422.9 L453.2,435.5 L491.9,446.7 L530.7,441.3 L569.5,387.9 L608.3,394.9 L647.1,365.5 L685.8,404.4 L724.6,435.0" fill="none" stroke="var(--series-2)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="65.4" cy="453.9" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 2W, Smooth bootstrap: p50 0.09, p90 2.63 bp (n=568)</title></circle>
+<circle cx="104.2" cy="451.6" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 3W, Smooth bootstrap: p50 0.19, p90 2.69 bp (n=551)</title></circle>
+<circle cx="142.9" cy="445.7" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 1M, Smooth bootstrap: p50 0.44, p90 4.77 bp (n=568)</title></circle>
+<circle cx="181.7" cy="440.6" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 2M, Smooth bootstrap: p50 0.66, p90 4.87 bp (n=568)</title></circle>
+<circle cx="220.5" cy="405.4" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 3M, Smooth bootstrap: p50 2.17, p90 8.11 bp (n=568)</title></circle>
+<circle cx="259.3" cy="409.3" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 6M, Smooth bootstrap: p50 2.00, p90 6.93 bp (n=568)</title></circle>
+<circle cx="298.1" cy="447.4" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 9M, Smooth bootstrap: p50 0.37, p90 1.78 bp (n=568)</title></circle>
+<circle cx="336.8" cy="442.2" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 1Y, Smooth bootstrap: p50 0.59, p90 3.70 bp (n=568)</title></circle>
+<circle cx="375.6" cy="437.3" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 18M, Smooth bootstrap: p50 0.80, p90 3.20 bp (n=568)</title></circle>
+<circle cx="414.4" cy="422.9" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 2Y, Smooth bootstrap: p50 1.42, p90 2.62 bp (n=568)</title></circle>
+<circle cx="453.2" cy="435.5" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 3Y, Smooth bootstrap: p50 0.88, p90 2.51 bp (n=568)</title></circle>
+<circle cx="491.9" cy="446.7" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 4Y, Smooth bootstrap: p50 0.40, p90 0.80 bp (n=568)</title></circle>
+<circle cx="530.7" cy="441.3" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 5Y, Smooth bootstrap: p50 0.63, p90 1.38 bp (n=568)</title></circle>
+<circle cx="569.5" cy="387.9" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 7Y, Smooth bootstrap: p50 2.92, p90 3.93 bp (n=568)</title></circle>
+<circle cx="608.3" cy="394.9" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 10Y, Smooth bootstrap: p50 2.62, p90 4.10 bp (n=568)</title></circle>
+<circle cx="647.1" cy="365.5" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 15Y, Smooth bootstrap: p50 3.88, p90 7.14 bp (n=568)</title></circle>
+<circle cx="685.8" cy="404.4" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 20Y, Smooth bootstrap: p50 2.21, p90 3.07 bp (n=568)</title></circle>
+<circle cx="724.6" cy="435.0" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 25Y, Smooth bootstrap: p50 0.90, p90 1.33 bp (n=568)</title></circle>
+<path d="M65.4,452.0 L104.2,452.0 L142.9,452.0 L181.7,449.0 L220.5,446.4 L259.3,445.0 L298.1,446.9 L336.8,448.1 L375.6,448.3 L414.4,446.9 L453.2,447.1 L491.9,450.9 L530.7,450.4 L569.5,446.2 L608.3,445.7 L647.1,418.0 L685.8,447.6 L724.6,448.5" fill="none" stroke="var(--series-1)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="65.4" cy="452.0" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 2W, Underdetermined fit: p50 0.17, p90 1.02 bp (n=568)</title></circle>
+<circle cx="104.2" cy="452.0" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 3W, Underdetermined fit: p50 0.17, p90 0.78 bp (n=551)</title></circle>
+<circle cx="142.9" cy="452.0" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 1M, Underdetermined fit: p50 0.17, p90 0.69 bp (n=568)</title></circle>
+<circle cx="181.7" cy="449.0" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 2M, Underdetermined fit: p50 0.30, p90 1.29 bp (n=568)</title></circle>
+<circle cx="220.5" cy="446.4" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 3M, Underdetermined fit: p50 0.41, p90 1.35 bp (n=568)</title></circle>
+<circle cx="259.3" cy="445.0" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 6M, Underdetermined fit: p50 0.47, p90 2.57 bp (n=568)</title></circle>
+<circle cx="298.1" cy="446.9" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 9M, Underdetermined fit: p50 0.39, p90 1.53 bp (n=568)</title></circle>
+<circle cx="336.8" cy="448.1" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 1Y, Underdetermined fit: p50 0.34, p90 1.20 bp (n=568)</title></circle>
+<circle cx="375.6" cy="448.3" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 18M, Underdetermined fit: p50 0.33, p90 1.12 bp (n=568)</title></circle>
+<circle cx="414.4" cy="446.9" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 2Y, Underdetermined fit: p50 0.39, p90 1.45 bp (n=568)</title></circle>
+<circle cx="453.2" cy="447.1" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 3Y, Underdetermined fit: p50 0.38, p90 1.16 bp (n=568)</title></circle>
+<circle cx="491.9" cy="450.9" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 4Y, Underdetermined fit: p50 0.22, p90 0.71 bp (n=568)</title></circle>
+<circle cx="530.7" cy="450.4" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 5Y, Underdetermined fit: p50 0.24, p90 0.77 bp (n=568)</title></circle>
+<circle cx="569.5" cy="446.2" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 7Y, Underdetermined fit: p50 0.42, p90 1.35 bp (n=568)</title></circle>
+<circle cx="608.3" cy="445.7" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 10Y, Underdetermined fit: p50 0.44, p90 1.64 bp (n=568)</title></circle>
+<circle cx="647.1" cy="418.0" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 15Y, Underdetermined fit: p50 1.63, p90 3.54 bp (n=568)</title></circle>
+<circle cx="685.8" cy="447.6" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 20Y, Underdetermined fit: p50 0.36, p90 0.72 bp (n=568)</title></circle>
+<circle cx="724.6" cy="448.5" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>EUR 25Y, Underdetermined fit: p50 0.32, p90 0.62 bp (n=568)</title></circle>
+<text class="t-panel" x="16" y="504">GBP</text>
+<rect x="46.0" y="520.0" width="387.8" height="140" fill="var(--band)"/>
+<line class="axis" x1="46" y1="660.0" x2="744" y2="660.0"/>
+<text class="t-axis" x="38" y="664.0" text-anchor="end">0</text>
+<line class="grid" x1="46" y1="636.7" x2="744" y2="636.7"/>
+<text class="t-axis" x="38" y="640.7" text-anchor="end">1</text>
+<line class="grid" x1="46" y1="613.3" x2="744" y2="613.3"/>
+<text class="t-axis" x="38" y="617.3" text-anchor="end">2</text>
+<line class="grid" x1="46" y1="590.0" x2="744" y2="590.0"/>
+<text class="t-axis" x="38" y="594.0" text-anchor="end">3</text>
+<line class="grid" x1="46" y1="566.7" x2="744" y2="566.7"/>
+<text class="t-axis" x="38" y="570.7" text-anchor="end">4</text>
+<line class="grid" x1="46" y1="543.3" x2="744" y2="543.3"/>
+<text class="t-axis" x="38" y="547.3" text-anchor="end">5</text>
+<line class="grid" x1="46" y1="520.0" x2="744" y2="520.0"/>
+<text class="t-axis" x="38" y="524.0" text-anchor="end">6</text>
+<text class="t-cat" x="65.4" y="677" text-anchor="middle">2W</text>
+<text class="t-cat" x="104.2" y="677" text-anchor="middle">3W</text>
+<text class="t-cat" x="142.9" y="677" text-anchor="middle">1M</text>
+<text class="t-cat" x="181.7" y="677" text-anchor="middle">2M</text>
+<text class="t-cat" x="220.5" y="677" text-anchor="middle">3M</text>
+<text class="t-cat" x="259.3" y="677" text-anchor="middle">6M</text>
+<text class="t-cat" x="298.1" y="677" text-anchor="middle">9M</text>
+<text class="t-cat" x="336.8" y="677" text-anchor="middle">1Y</text>
+<text class="t-cat" x="375.6" y="677" text-anchor="middle">18M</text>
+<text class="t-cat" x="414.4" y="677" text-anchor="middle">2Y</text>
+<text class="t-cat" x="453.2" y="677" text-anchor="middle">3Y</text>
+<text class="t-cat" x="491.9" y="677" text-anchor="middle">4Y</text>
+<text class="t-cat" x="530.7" y="677" text-anchor="middle">5Y</text>
+<text class="t-cat" x="569.5" y="677" text-anchor="middle">7Y</text>
+<text class="t-cat" x="608.3" y="677" text-anchor="middle">10Y</text>
+<text class="t-cat" x="647.1" y="677" text-anchor="middle">15Y</text>
+<text class="t-cat" x="685.8" y="677" text-anchor="middle">20Y</text>
+<text class="t-cat" x="724.6" y="677" text-anchor="middle">25Y</text>
+<path d="M65.4,657.7 L104.2,657.4 L142.9,648.8 L181.7,616.4 L220.5,582.3 L259.3,577.4 L298.1,636.7 L336.8,634.3 L375.6,641.6 L414.4,625.9 L453.2,611.7 L491.9,632.0 L530.7,621.5 L569.5,623.8 L608.3,622.2 L647.1,635.3 L685.8,632.9 L724.6,643.0" fill="none" stroke="var(--series-3)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="65.4" cy="657.7" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 2W, Flat-forward bootstrap: p50 0.10, p90 3.23 bp (n=704)</title></circle>
+<circle cx="104.2" cy="657.4" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 3W, Flat-forward bootstrap: p50 0.11, p90 3.41 bp (n=715)</title></circle>
+<circle cx="142.9" cy="648.8" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 1M, Flat-forward bootstrap: p50 0.48, p90 6.95 bp (n=719)</title></circle>
+<circle cx="181.7" cy="616.4" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 2M, Flat-forward bootstrap: p50 1.87, p90 8.41 bp (n=718)</title></circle>
+<circle cx="220.5" cy="582.3" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 3M, Flat-forward bootstrap: p50 3.33, p90 13.55 bp (n=719)</title></circle>
+<circle cx="259.3" cy="577.4" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 6M, Flat-forward bootstrap: p50 3.54, p90 11.68 bp (n=719)</title></circle>
+<circle cx="298.1" cy="636.7" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 9M, Flat-forward bootstrap: p50 1.00, p90 3.32 bp (n=719)</title></circle>
+<circle cx="336.8" cy="634.3" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 1Y, Flat-forward bootstrap: p50 1.10, p90 3.99 bp (n=719)</title></circle>
+<circle cx="375.6" cy="641.6" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 18M, Flat-forward bootstrap: p50 0.79, p90 5.45 bp (n=719)</title></circle>
+<circle cx="414.4" cy="625.9" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 2Y, Flat-forward bootstrap: p50 1.46, p90 6.15 bp (n=719)</title></circle>
+<circle cx="453.2" cy="611.7" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 3Y, Flat-forward bootstrap: p50 2.07, p90 4.98 bp (n=719)</title></circle>
+<circle cx="491.9" cy="632.0" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 4Y, Flat-forward bootstrap: p50 1.20, p90 2.57 bp (n=719)</title></circle>
+<circle cx="530.7" cy="621.5" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 5Y, Flat-forward bootstrap: p50 1.65, p90 3.56 bp (n=719)</title></circle>
+<circle cx="569.5" cy="623.8" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 7Y, Flat-forward bootstrap: p50 1.55, p90 6.14 bp (n=719)</title></circle>
+<circle cx="608.3" cy="622.2" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 10Y, Flat-forward bootstrap: p50 1.62, p90 5.90 bp (n=719)</title></circle>
+<circle cx="647.1" cy="635.3" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 15Y, Flat-forward bootstrap: p50 1.06, p90 2.06 bp (n=719)</title></circle>
+<circle cx="685.8" cy="632.9" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 20Y, Flat-forward bootstrap: p50 1.16, p90 1.81 bp (n=719)</title></circle>
+<circle cx="724.6" cy="643.0" r="4" fill="var(--series-3)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 25Y, Flat-forward bootstrap: p50 0.73, p90 2.04 bp (n=719)</title></circle>
+<path d="M65.4,656.0 L104.2,650.7 L142.9,648.3 L181.7,649.7 L220.5,605.4 L259.3,599.8 L298.1,650.7 L336.8,645.1 L375.6,649.0 L414.4,639.2 L453.2,630.4 L491.9,653.5 L530.7,633.4 L569.5,634.3 L608.3,629.7 L647.1,643.7 L685.8,643.9 L724.6,647.6" fill="none" stroke="var(--series-2)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="65.4" cy="656.0" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 2W, Smooth bootstrap: p50 0.17, p90 2.56 bp (n=704)</title></circle>
+<circle cx="104.2" cy="650.7" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 3W, Smooth bootstrap: p50 0.40, p90 2.83 bp (n=715)</title></circle>
+<circle cx="142.9" cy="648.3" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 1M, Smooth bootstrap: p50 0.50, p90 5.51 bp (n=719)</title></circle>
+<circle cx="181.7" cy="649.7" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 2M, Smooth bootstrap: p50 0.44, p90 3.07 bp (n=718)</title></circle>
+<circle cx="220.5" cy="605.4" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 3M, Smooth bootstrap: p50 2.34, p90 9.23 bp (n=719)</title></circle>
+<circle cx="259.3" cy="599.8" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 6M, Smooth bootstrap: p50 2.58, p90 8.68 bp (n=719)</title></circle>
+<circle cx="298.1" cy="650.7" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 9M, Smooth bootstrap: p50 0.40, p90 1.22 bp (n=719)</title></circle>
+<circle cx="336.8" cy="645.1" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 1Y, Smooth bootstrap: p50 0.64, p90 2.65 bp (n=719)</title></circle>
+<circle cx="375.6" cy="649.0" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 18M, Smooth bootstrap: p50 0.47, p90 2.89 bp (n=719)</title></circle>
+<circle cx="414.4" cy="639.2" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 2Y, Smooth bootstrap: p50 0.89, p90 4.21 bp (n=719)</title></circle>
+<circle cx="453.2" cy="630.4" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 3Y, Smooth bootstrap: p50 1.27, p90 3.19 bp (n=719)</title></circle>
+<circle cx="491.9" cy="653.5" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 4Y, Smooth bootstrap: p50 0.28, p90 0.82 bp (n=719)</title></circle>
+<circle cx="530.7" cy="633.4" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 5Y, Smooth bootstrap: p50 1.14, p90 2.08 bp (n=719)</title></circle>
+<circle cx="569.5" cy="634.3" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 7Y, Smooth bootstrap: p50 1.10, p90 3.77 bp (n=719)</title></circle>
+<circle cx="608.3" cy="629.7" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 10Y, Smooth bootstrap: p50 1.30, p90 4.30 bp (n=719)</title></circle>
+<circle cx="647.1" cy="643.7" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 15Y, Smooth bootstrap: p50 0.70, p90 1.52 bp (n=719)</title></circle>
+<circle cx="685.8" cy="643.9" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 20Y, Smooth bootstrap: p50 0.69, p90 1.06 bp (n=719)</title></circle>
+<circle cx="724.6" cy="647.6" r="4" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 25Y, Smooth bootstrap: p50 0.53, p90 1.67 bp (n=719)</title></circle>
+<path d="M65.4,654.6 L104.2,653.9 L142.9,655.6 L181.7,654.9 L220.5,654.9 L259.3,651.1 L298.1,651.6 L336.8,655.1 L375.6,654.4 L414.4,653.5 L453.2,654.6 L491.9,656.7 L530.7,655.6 L569.5,648.3 L608.3,651.4 L647.1,648.3 L685.8,655.3 L724.6,648.3" fill="none" stroke="var(--series-1)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="65.4" cy="654.6" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 2W, Underdetermined fit: p50 0.23, p90 1.08 bp (n=704)</title></circle>
+<circle cx="104.2" cy="653.9" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 3W, Underdetermined fit: p50 0.26, p90 0.81 bp (n=715)</title></circle>
+<circle cx="142.9" cy="655.6" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 1M, Underdetermined fit: p50 0.19, p90 0.89 bp (n=719)</title></circle>
+<circle cx="181.7" cy="654.9" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 2M, Underdetermined fit: p50 0.22, p90 1.19 bp (n=718)</title></circle>
+<circle cx="220.5" cy="654.9" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 3M, Underdetermined fit: p50 0.22, p90 1.02 bp (n=719)</title></circle>
+<circle cx="259.3" cy="651.1" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 6M, Underdetermined fit: p50 0.38, p90 2.07 bp (n=719)</title></circle>
+<circle cx="298.1" cy="651.6" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 9M, Underdetermined fit: p50 0.36, p90 2.01 bp (n=719)</title></circle>
+<circle cx="336.8" cy="655.1" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 1Y, Underdetermined fit: p50 0.21, p90 1.10 bp (n=719)</title></circle>
+<circle cx="375.6" cy="654.4" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 18M, Underdetermined fit: p50 0.24, p90 1.30 bp (n=719)</title></circle>
+<circle cx="414.4" cy="653.5" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 2Y, Underdetermined fit: p50 0.28, p90 1.46 bp (n=719)</title></circle>
+<circle cx="453.2" cy="654.6" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 3Y, Underdetermined fit: p50 0.23, p90 1.14 bp (n=719)</title></circle>
+<circle cx="491.9" cy="656.7" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 4Y, Underdetermined fit: p50 0.14, p90 0.59 bp (n=719)</title></circle>
+<circle cx="530.7" cy="655.6" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 5Y, Underdetermined fit: p50 0.19, p90 0.68 bp (n=719)</title></circle>
+<circle cx="569.5" cy="648.3" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 7Y, Underdetermined fit: p50 0.50, p90 1.61 bp (n=719)</title></circle>
+<circle cx="608.3" cy="651.4" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 10Y, Underdetermined fit: p50 0.37, p90 0.83 bp (n=719)</title></circle>
+<circle cx="647.1" cy="648.3" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 15Y, Underdetermined fit: p50 0.50, p90 1.06 bp (n=719)</title></circle>
+<circle cx="685.8" cy="655.3" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 20Y, Underdetermined fit: p50 0.20, p90 0.43 bp (n=719)</title></circle>
+<circle cx="724.6" cy="648.3" r="4" fill="var(--series-1)" stroke="var(--surface-1)" stroke-width="2"><title>GBP 25Y, Underdetermined fit: p50 0.50, p90 1.42 bp (n=719)</title></circle>
+<text class="t-note" x="16" y="704">1W and 30Y are the ends of the set and are not left out. Pooled over the seven windows; EUR from October 2019.</text>
+</svg>
