@@ -2,6 +2,9 @@
 /resources/
 /.hugo_build.lock
 
+# Local scratch space for drafts in progress
+/temp/
+
 # Obsidian metadata files
 *.md.md
 **/*.png.md
