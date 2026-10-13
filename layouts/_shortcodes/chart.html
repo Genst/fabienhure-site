@@ -1,0 +1,21 @@
+{{- /* Inline an SVG chart from the page bundle so it follows the site's theme toggle.
+       Usage: {{< chart src="charts/x.svg" data="data/x.csv" datalabel="..." >}}Caption (Markdown){{< /chart >}}
+       The SVG keys its dark palette on html[data-theme]; see the chart generator. */ -}}
+{{- $svg := .Page.Resources.Get (.Get "src") -}}
+{{- if not $svg -}}
+  {{- errorf "chart: %q not found in bundle %s" (.Get "src") .Page.File.Path -}}
+{{- end -}}
+<figure class="chart">
+  {{ $svg.Content | safeHTML }}
+  <figcaption>
+    {{- with .Inner }}<span class="chart-caption">{{ . | $.Page.RenderString }}</span>{{ end }}
+    <span class="chart-links">
+      {{- with .Get "data" -}}
+        {{- $csv := $.Page.Resources.Get . -}}
+        {{- if not $csv }}{{ errorf "chart: %q not found in bundle %s" . $.Page.File.Path }}{{ end -}}
+        Data: <a href="{{ $csv.RelPermalink }}" download>{{ $.Get "datalabel" | default "CSV" }}</a> ·
+      {{- end }}
+      <a href="{{ $svg.RelPermalink }}" target="_blank" rel="noopener">Full size</a>
+    </span>
+  </figcaption>
+</figure>

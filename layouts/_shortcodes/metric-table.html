@@ -1,0 +1,74 @@
+{{- /* Grouped-column table from a CSV in the page bundle: one column group per metric, one
+       column per method, rows grouped by the first CSV column. The best value in each group
+       (smallest absolute value) is bold.
+       Usage:
+         {{< metric-table src="data/x.csv" group="window" label="ccy" count="periods"
+               metrics="p90=90th percentile, absolute; mean=Mean, signed"
+               methods="flat=Flat; smooth=Smooth; ud=Fit" signed="mean" >}}Caption (Markdown){{< /metric-table >}}
+       CSV columns: the group, label and count columns, then <metric>_<method> for each pair. */ -}}
+{{- $csv := .Page.Resources.Get (.Get "src") -}}
+{{- if not $csv }}{{ errorf "metric-table: %q not found in bundle %s" (.Get "src") .Page.File.Path }}{{ end -}}
+{{- $rows := $csv | transform.Unmarshal (dict "delimiter" ",") -}}
+{{- $head := index $rows 0 -}}
+{{- $col := dict -}}
+{{- range $i, $h := $head }}{{ $col = merge $col (dict $h $i) }}{{ end -}}
+{{- $metrics := slice -}}
+{{- range split (.Get "metrics") ";" -}}
+  {{- $kv := split (trim . " ") "=" -}}
+  {{- $metrics = $metrics | append (dict "key" (index $kv 0) "label" (index $kv 1)) -}}
+{{- end -}}
+{{- $methods := slice -}}
+{{- range split (.Get "methods") ";" -}}
+  {{- $kv := split (trim . " ") "=" -}}
+  {{- $methods = $methods | append (dict "key" (index $kv 0) "label" (index $kv 1)) -}}
+{{- end -}}
+{{- $signed := split (.Get "signed" | default "") " " -}}
+{{- $gi := index $col (.Get "group") -}}
+{{- $li := index $col (.Get "label") -}}
+{{- $ci := -1 -}}
+{{- with .Get "count" }}{{ $ci = index $col . }}{{ end -}}
+<figure class="metric-table">
+<div class="metric-table-scroll">
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2"></th>
+      {{- range $metrics }}<th class="group first" colspan="{{ len $methods }}">{{ .label }}</th>{{ end }}
+    </tr>
+    <tr>
+      {{- range $metrics }}{{ range $j, $m := $methods }}<th class="num m-{{ $m.key }}{{ if eq $j 0 }} first{{ end }}">{{ $m.label }}</th>{{ end }}{{ end }}
+    </tr>
+  </thead>
+  <tbody>
+  {{- $last := "" -}}
+  {{- range after 1 $rows -}}
+    {{- $r := . -}}
+    {{- $g := index $r $gi -}}
+    {{- if ne $g $last }}
+    <tr class="rowgroup"><th colspan="{{ add 1 (mul (len $metrics) (len $methods)) }}">{{ $g }}</th></tr>
+      {{- $last = $g -}}
+    {{- end }}
+    <tr>
+      <th class="label">{{ index $r $li }}{{ if ge $ci 0 }} <span class="count">({{ index $r $ci }})</span>{{ end }}</th>
+      {{- range $metrics -}}
+        {{- $mk := .key -}}
+        {{- $vals := slice -}}
+        {{- range $methods }}{{ $vals = $vals | append (float (index $r (index $col (printf "%s_%s" $mk .key)))) }}{{ end -}}
+        {{- $best := 1e9 -}}
+        {{- range $vals }}{{ $best = math.Min $best (math.Abs .) }}{{ end -}}
+        {{- range $j, $v := $vals -}}
+          {{- $s := printf "%.2f" (math.Abs $v) -}}
+          {{- if in $signed $mk }}{{ $s = printf "%s%s" (cond (lt $v 0.0) "−" "+") $s }}{{ end -}}
+          <td class="num{{ if eq $j 0 }} first{{ end }}{{ if eq (math.Abs $v) $best }} best{{ end }}">{{ $s }}</td>
+        {{- end -}}
+      {{- end }}
+    </tr>
+  {{- end }}
+  </tbody>
+</table>
+</div>
+<figcaption>
+  {{- with .Inner }}<span class="chart-caption">{{ . | $.Page.RenderString }}</span>{{ end }}
+  <span class="chart-links">Data: <a href="{{ $csv.RelPermalink }}" download>{{ .Get "datalabel" | default "CSV" }}</a></span>
+</figcaption>
+</figure>

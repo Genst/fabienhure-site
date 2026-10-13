@@ -169,3 +169,156 @@
     font-size: 0.9rem;
     margin-top: 0.4rem;
 }
+
+/* Inline SVG charts (chart shortcode): scale to the column, blend into the page. */
+.md-content figure.chart {
+    margin: 2rem 0;
+}
+
+.md-content figure.chart svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.md-content figure.chart .viz-root {
+    --surface-1: var(--theme);
+}
+
+.md-content figure.chart figcaption {
+    margin-top: 0.6rem;
+    color: var(--secondary);
+    font-weight: normal;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.md-content figure.chart .chart-links {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+}
+
+/* Grouped-column tables (metric-table shortcode): compact, aligned numbers, method colours
+   matching the charts. Scrolls sideways on narrow screens instead of wrapping. */
+.md-content figure.metric-table {
+    margin: 2rem 0;
+}
+
+.md-content .metric-table-scroll {
+    overflow-x: auto;
+}
+
+.md-content .metric-table table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    font-variant-numeric: tabular-nums;
+    margin: 0;
+}
+
+.md-content .metric-table table th,
+.md-content .metric-table table:not(.highlighttable) td {
+    min-width: 0;
+    padding: 0.3rem 0.55rem;
+    border: none;
+    white-space: nowrap;
+}
+
+.md-content .metric-table thead th {
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.md-content .metric-table thead tr:last-child th,
+.md-content .metric-table thead th[rowspan] {
+    border-bottom: 2px solid var(--accent);
+}
+
+.md-content .metric-table tbody th {
+    background: none;
+}
+
+.md-content .metric-table thead th.group {
+    text-align: center;
+    color: var(--primary);
+}
+
+.md-content .metric-table th.num,
+.md-content .metric-table td.num {
+    text-align: end;
+}
+
+.md-content .metric-table th.num,
+.md-content .metric-table table:not(.highlighttable) td.num {
+    width: 9%;
+}
+
+.md-content .metric-table th.first,
+.md-content .metric-table table:not(.highlighttable) td.first {
+    border-inline-start: 1px solid var(--border);
+}
+
+.md-content .metric-table thead th.m-flat::before,
+.md-content .metric-table thead th.m-smooth::before,
+.md-content .metric-table thead th.m-ud::before {
+    content: "";
+    display: inline-block;
+    width: 0.55em;
+    height: 0.55em;
+    margin-inline-end: 0.3em;
+    border-radius: 1px;
+    vertical-align: 0.05em;
+}
+
+.md-content .metric-table th.m-ud::before { background: #2a78d6; }
+.md-content .metric-table th.m-smooth::before { background: #eb6834; }
+.md-content .metric-table th.m-flat::before { background: #1baf7a; }
+[data-theme="dark"] .md-content .metric-table th.m-ud::before { background: #3987e5; }
+[data-theme="dark"] .md-content .metric-table th.m-smooth::before { background: #d95926; }
+[data-theme="dark"] .md-content .metric-table th.m-flat::before { background: #199e70; }
+
+.md-content .metric-table tr.rowgroup th {
+    padding-top: 0.8rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+}
+
+.md-content .metric-table th.label {
+    font-weight: normal;
+}
+
+.md-content .metric-table .count {
+    color: var(--secondary);
+}
+
+.md-content .metric-table td.best {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.md-content .metric-table td {
+    color: var(--secondary);
+}
+
+.md-content figure.metric-table figcaption {
+    margin-top: 0.6rem;
+    color: var(--secondary);
+    font-weight: normal;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.md-content figure.metric-table .chart-links {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+}
+
+/* Keep row labels in view when a metric table scrolls sideways on narrow screens. */
+.md-content .metric-table tbody th.label {
+    position: sticky;
+    inset-inline-start: 0;
+    background: var(--theme);
+}
