@@ -4,7 +4,7 @@
   window.mermaid = mermaid;
 
   function themeConfig() {
-    const isDark = document.body.classList.contains('dark');
+    const isDark = document.documentElement.dataset.theme === 'dark';
     return {
       startOnLoad: false,
       theme: 'base',
